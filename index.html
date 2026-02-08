@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali's notes for Johnny my beautiful and cute ex boyfriend🥰</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffc9e5 50%, #ffb3d9 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Floating hearts background animation */
+        body::before {
+            content: '♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥ ♥';
+            position: fixed;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            font-size: 2em;
+            color: rgba(255, 182, 193, 0.3);
+            animation: float-hearts 20s linear infinite;
+            z-index: 0;
+            letter-spacing: 60px;
+        }
+
+        @keyframes float-hearts {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(255, 105, 180, 0.4);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border: 3px solid rgba(255, 182, 193, 0.5);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ff9ec4 0%, #ffb3d9 50%, #ffc9e5 100%);
+            color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .header::before {
+            content: '✨';
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 2em;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .header::after {
+            content: '✨';
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 2em;
+            animation: sparkle 2s ease-in-out infinite 1s;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(255, 105, 180, 0.4);
+            font-weight: 700;
+            background: linear-gradient(45deg, #fff, #ffe6f0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            font-weight: 500;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.3);
+        }
+
+        .content {
+            padding: 50px 40px;
+            background: linear-gradient(180deg, #fff5fa 0%, #ffffff 100%);
+        }
+
+        .reason {
+            background: linear-gradient(135deg, #fff0f6 0%, #ffe6f0 100%);
+            margin-bottom: 25px;
+            padding: 30px;
+            border-radius: 20px;
+            border-left: 6px solid #ff9ec4;
+            transition: all 0.4s ease;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.15);
+        }
+
+        .reason::before {
+            content: '💗';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .reason:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.3);
+            background: linear-gradient(135deg, #ffe6f0 0%, #ffd6e8 100%);
+        }
+
+        .reason:hover::before {
+            opacity: 1;
+            transform: rotate(15deg);
+        }
+
+        .reason-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff69b4 0%, #ff9ec4 100%);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+            border: 3px solid #fff;
+        }
+
+        .reason-text {
+            display: inline-block;
+            vertical-align: middle;
+            width: calc(100% - 70px);
+            font-size: 1.15em;
+            line-height: 1.7;
+            color: #4a2c3e;
+            font-weight: 500;
+        }
+
+        .special-message {
+            background: linear-gradient(135deg, #ffe6f0 0%, #ffd6e8 100%);
+            padding: 45px;
+            border-radius: 25px;
+            margin-top: 35px;
+            border: 4px solid #ff9ec4;
+            box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-message::before {
+            content: '💕';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 8em;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .special-message::after {
+            content: '💕';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 8em;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .special-message h2 {
+            color: #d63384;
+            margin-bottom: 25px;
+            font-size: 2em;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.2);
+        }
+
+        .special-message p {
+            font-size: 1.25em;
+            line-height: 1.9;
+            color: #4a2c3e;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 35px;
+            background: linear-gradient(135deg, #fff0f6 0%, #ffe6f0 100%);
+            color: #d63384;
+            font-size: 1em;
+            font-weight: 500;
+        }
+
+        .heart {
+            color: #ff1493;
+            font-size: 1.5em;
+            display: inline-block;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.15); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.15); }
+        }
+
+        /* Decorative elements */
+        .decorative-hearts {
+            position: absolute;
+            font-size: 1.2em;
+            color: rgba(255, 105, 180, 0.2);
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .header::before,
+            .header::after {
+                font-size: 1.5em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .reason {
+                padding: 25px 20px;
+            }
+            
+            .reason-text {
+                width: 100%;
+                display: block;
+                margin-top: 15px;
+            }
+
+            .special-message {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ali's notes for Johnny<br>my beautiful and cute ex boyfriend🥰</h1>
+            <p>10 Reasons to Love Yourself</p>
+        </div>
+
+        <div class="content">
+            <div class="reason">
+                <span class="reason-number">1</span>
+                <span class="reason-text">his older brother is still protecting him even if he's dead his soul still looks out for him and protects him as his guardian angel</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">2</span>
+                <span class="reason-text">his friends and also his ex(ali) are still worried about him</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">3</span>
+                <span class="reason-text">his ex(ali) is still checking on his account if he's gone or not</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">4</span>
+                <span class="reason-text">his friends and his ex are all there for him to help him out</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">5</span>
+                <span class="reason-text">his older brother will continue supporting him on even if he's gone</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">6</span>
+                <span class="reason-text">even tho his families treated him trash he can treat his best friends and friends as his family</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">7</span>
+                <span class="reason-text">his ex still checks for his account if he has a new lover(if he has i hope his new lover treats him well) or if he still wants to get back with his ex</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">8</span>
+                <span class="reason-text">he still had a pathway to walk through and everyone he helped and supported will support him back and will help him get on the right path</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">9</span>
+                <span class="reason-text">not everyone hates him but some hates him and others loves him even his ex still supports and looks out for him to this day</span>
+            </div>
+
+            <div class="reason">
+                <span class="reason-number">10</span>
+                <span class="reason-text">hey if your reading this please don't let your guard down me, your friends, your best friends, and your older brother are still here to support you.</span>
+            </div>
+
+            <div class="special-message">
+                <h2>A Message for Johnny</h2>
+                <p>
+                    hey if your reading this please don't let your guard down me, your friends, your best friends, and your older brother are still here to support you. <span class="heart">♥</span>
+                </p>
+                <p style="margin-top: 25px; font-size: 1.1em; font-style: italic; border-top: 2px dashed rgba(255, 105, 180, 0.3); padding-top: 20px;">
+                    <strong>P.S.</strong> my mom agreed on us being a couple if we got back she'll keep our relationships hidden
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            Made with love and care <span class="heart">♥</span>
+        </div>
+    </div>
+</body>
+</html>+
+
+
